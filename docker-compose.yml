@@ -1,13 +1,13 @@
 version: '2'
 services:
   forum:
-    image: typedefstructer/scforum:base
+    image: typedefstructer/scforum:v0.1.1
     cap_add:
       - SYS_ADMIN
     security_opt:
       - apparmor:unconfined
     ports:
-      - "3000:3000"
+      - "80:3000"
     volumes:
       - ..:/src
       - ./data:/data
@@ -15,6 +15,7 @@ services:
     hostname: scforums
     environment:
       - PGHOST=scforums_postgres
+      - RAILS_ENV=production
     links:
       - postgres_service:scforums_postgres
     command: bash
@@ -33,6 +34,6 @@ services:
   postgres_service:
     image: postgres:9
     environment:
-      - POSTGRES_USER=sc
+      - POSTGRES_USER=discourse
     volumes:
       - ./data/db/postgres:/var/lib/postgresql/data
