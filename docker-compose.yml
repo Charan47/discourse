@@ -18,11 +18,20 @@ services:
       - RAILS_ENV=production
     links:
       - postgres_service:scforums_postgres
+      - mail_local:scforums_mail
     command: bash
     stdin_open: true
     tty: true
     depends_on:
       - postgres_phppgadmin
+      - mail_local
+  mail_local:
+    image: namshi/smtp
+    environment:
+      - SMARTHOST_ADDRESS=smtp.sendgrid.net
+      - SMARTHOST_USER=dodlasricharan
+      - SMARTHOST_PASSWORD=mikeljackson
+      - SMARTHOST_PORT=587
   postgres_phppgadmin:
     image: clue/adminer
     ports:
