@@ -13,6 +13,7 @@
 }
 
 #login-form {
+  visibility: hidden;
   a {
     color: dark-light-choose(scale-color($primary, $lightness: 35%), scale-color($secondary, $lightness: 65%));
   }
