@@ -12,7 +12,7 @@
         <tr class="input">
               <td class="label"><label for='new-account-email'>{{i18n 'user.email.title'}}</label></td>
               <td>
-              {{input type="email" value=accountEmail id="new-account-email" disabled=emailValidated  name="email" autofocus="autofocus" disabled=true }}
+              {{input type="email" value=accountEmail id="new-account-email" disabled=emailValidated  name="email" autofocus="autofocus"}}
               &nbsp;{{input-tip validation=emailValidation}}
               </td>
         </tr>
@@ -25,7 +25,7 @@
           <tr class="input">
                 <td class="label"><label for='new-account-username'>{{i18n 'user.username.title'}}</label></td>
                 <td>
-                {{input value=accountUsername id="new-account-username" name="username" maxlength=maxUsernameLength autocomplete="off" disabled=true }}
+                {{input value=accountUsername id="new-account-username" name="username" maxlength=maxUsernameLength autocomplete="off" disabled="true|	 }}
                 &nbsp;{{input-tip validation=usernameValidation id="username-validation"}}
                 </td>
           </tr>
@@ -41,7 +41,7 @@
               <label for='new-account-name'>{{i18n 'user.name.title'}}</label>
             </td>
             <td style="width:496px">
-              {{text-field value=accountName id="new-account-name"}}&nbsp;{{input-tip validation=nameValidation disabled=true }}
+              {{text-field value=accountName id="new-account-name"}}&nbsp;{{input-tip validation=nameValidation}}
             </td>
           </tr>
           <tr class="instructions">
@@ -56,7 +56,7 @@
           <tr class="input">
               <td class="label"><label for='new-account-password'>{{i18n 'user.password.title'}}</label></td>
               <td>
-              {{password-field value=accountPassword type="password" id="new-account-password" capsLockOn=capsLockOn disabled=true }}
+              {{password-field value=accountPassword type="password" id="new-account-password" capsLockOn=capsLockOn}}
               &nbsp;{{input-tip validation=passwordValidation}}
               </td>
           </tr>
@@ -72,7 +72,7 @@
         <tr class="password-confirmation">
           <td><label for='new-account-password-confirmation'>{{i18n 'user.password_confirmation.title'}}</label></td>
           <td>
-            {{input type="password" value=accountPasswordConfirm id="new-account-confirmation" disabled=true }}
+            {{input type="password" value=accountPasswordConfirm id="new-account-confirmation"}}
             {{input value=accountChallenge id="new-account-challenge"}}
           </td>
         </tr>
