@@ -124,7 +124,7 @@
     font-size: 17px;
   }
   &.google, &.google_oauth2 {
-    background: $google;
+    background: #DC2F2F;
     &:before {
       content: $fa-var-google;
     }
